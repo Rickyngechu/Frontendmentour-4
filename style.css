@@ -54,7 +54,7 @@ body {
 }
 /* Styling the call to action section */
 .calltoaction {
-  height: 100rem;
+  height: 50rem;
   background-color: var(--Light-Grayish-Blue1);
 }
 .cta-cont {
