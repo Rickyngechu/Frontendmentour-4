@@ -1,0 +1,318 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+}
+
+:root {
+  /* (Full Slider Bar) */
+  --Soft-Cyan: hsl(174, 77%, 80%);
+
+  /* (Slider Backround) */
+  --Strong-Cyan: hsl(174, 86%, 45%);
+
+  /* (Discount Background) */
+  --Light-Grayish-Red: hsl(14, 92%, 95%);
+
+  /* (Discount Text) */
+  --Light-Red: hsl(15, 100%, 70%);
+
+  /* (CTA Text) */
+  --Pale-Blue: hsl(226, 100%, 87%);
+
+  /* (Pricing Component Background) */
+  --White: hsl(0, 0%, 100%);
+
+  /* (Main Background) */
+  --Very-Pale-Blue: hsl(230, 100%, 99%);
+
+  /* (Empty Slider Bar) */
+  --Light-Grayish-Blue1: hsl(224, 65%, 95%);
+
+  /* (Toggle Background) */
+  --Light-Grayish-Blue2: hsl(223, 50%, 87%);
+
+  /* (Text) */
+  --Grayish-Blue: hsl(225, 20%, 60%);
+
+  /* (Text & CTA Background) */
+  --Dark-Desaturated-Blue: hsl(227, 35%, 25%);
+}
+
+.container {
+  width: 114rem;
+  max-width: 90%;
+  margin: 0 auto;
+}
+/* Styling the call to action section */
+.calltoaction {
+  height: 100rem;
+  background-color: var(--Light-Grayish-Blue1);
+}
+.cta-cont {
+  height: 25rem;
+  background-color: hsla(222, 49%, 87%, 0.317);
+  border-bottom-left-radius: 10rem;
+}
+.flex-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(2.5rem);
+}
+.cta-card {
+  /* transform: translateY(3rem) */
+  /* background-color: orange; */
+  padding: 0.5rem;
+  max-width: 80%;
+  width: 32rem;
+}
+.cta-head {
+  display: block;
+  /* margin-bottom: 2rem; */
+  text-align: center;
+  /* background-color: orange; */
+}
+
+.txt-head {
+  transform: translateY(-5rem);
+}
+.txt-head span:first-child {
+  display: block;
+  font-size: 1.8rem;
+  word-spacing: 1px;
+  font-weight: 800;
+  color: var(--Dark-Desaturated-Blue);
+  margin-bottom: 0.5rem;
+}
+.txt-head span:last-child {
+  font-size: 1rem;
+  color: var(--Grayish-Blue);
+}
+.cta-main {
+  background-color: var(--White);
+  border-radius: 6px;
+  box-shadow: hsl(223, 50%, 87%) 0px 13px 27px -5px,
+    hsl(223, 50%, 87%) 0px 8px 16px -8px;
+  padding: 2rem;
+}
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.price p:first-child {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--Grayish-Blue);
+}
+.price-det {
+  /*  */
+}
+.price-det-amt {
+  color: var(--Dark-Desaturated-Blue);
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+.price-det span:last-child {
+  color: var(--Grayish-Blue);
+}
+
+/* styles.css */
+.input-slider {
+  margin-bottom: 2rem;
+}
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 0.6rem;
+  background-color: var(--Light-Grayish-Blue1);
+  border-radius: 100rem;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 1.6rem;
+  width: 1.6rem;
+  border-radius: 50%;
+  background-color: var(--Strong-Cyan);
+  background-image: url(images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+output {
+  display: block;
+  font-weight: bold;
+  font-size: 24px;
+  margin-top: 10px;
+}
+.slider-icon {
+  position: absolute;
+}
+
+/* Styling the toggle button */
+.toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  margin-inline: 2rem;
+}
+.toggle-check {
+  align-self: center;
+}
+
+.year-text span {
+  background-color: hsla(15, 100%, 70%, 0.21);
+  color: var(--Light-Red);
+  border-radius: 2px;
+  font-size: 15px;
+}
+.input-check {
+  margin-top: 0.4rem;
+  position: relative;
+  display: inline-block;
+  width: 2.9rem;
+  height: 1.6rem;
+  background-color: var(--Light-Grayish-Blue1);
+  border-radius: 5rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.toggle-check {
+  position: relative;
+}
+.checkbox {
+  -webkit-appearance: none;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.checkbox:checked ~ .input-check {
+  background-color: var(--Strong-Cyan);
+}
+.input-check::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  height: 1.3rem;
+  width: 1.3rem;
+  background-color: var(--White);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.checkbox:checked ~ .input-check::before {
+  transform: translateX(1.2rem);
+}
+
+/* Styling the horizontal line */
+.hr {
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin-bottom: 1rem;
+  background-color: #22222236;
+}
+.cta-submit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cta-submit-ul {
+  list-style-type: none;
+}
+
+.cta-submit-ul li img {
+  margin-right: 0.5rem;
+}
+.cta-submit-ul li span {
+  font-size: 1rem;
+  color: var(--Grayish-Blue);
+  font-weight: 400;
+}
+.btn-submit {
+  padding: 0.5rem 1.5rem;
+  background-color: var(--Dark-Desaturated-Blue);
+  border: none;
+  outline: none;
+  border-radius: 100rem;
+  font-size: 1rem;
+  color: var(--White);
+}
+
+/* Media queries */
+@media screen and (max-width: 900px) {
+  .calltoaction {
+    height: 50rem;
+    background-color: var(--Light-Grayish-Blue1);
+  }
+  .cta-cont {
+    height: 25rem;
+    background-color: hsla(222, 49%, 87%, 0.317);
+    border-bottom-left-radius: 10rem;
+  }
+  .cta-card {
+    /* transform: translateY(3rem) */
+    /* background-color: orange; */
+    padding: 0.5rem;
+    max-width: 100%;
+    width: 32rem;
+  }
+}
+
+/* Styling the attribute section */
+.attribution {
+  position: relative;
+  background-color: var(--Light-Grayish-Blue1);
+}
+.attribution-text {
+  font-size: 1.2rem;
+  color: #000;
+}
+.att-cont {
+  text-align: center;
+  padding-block: 1rem;
+  color: #fff;
+}
+.port-link {
+  color: var(---primary-orange);
+}
+.front-link {
+  color: var(--color-White);
+}
+@media screen and (max-width: 600px) {
+  .year-text {
+    margin-left: 1rem;
+  }
+  .toggle {
+    margin-inline: 0.5rem;
+  }
+  .cta-submit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+}
